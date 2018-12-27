@@ -13471,17 +13471,53 @@ Method (_DSM, 4, NotSerialized)
                 }
             }
         }
-
+        
+             
         Device (FAN0)
         {
-            Name (_HID, EisaId ("PNP0C0B"))  // _HID: Hardware ID
+//            Name (_HID, EisaId ("PNP0C0B"))  // _HID: Hardware ID
+            Name (_HID,  "FAN00000")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Name (_PR0, Package (0x01)  // _PR0: Power Resources for D0
             {
                 FN00
             })
         }
+        
+        Device (SMCD)
+        {
+            Name (_HID,  "FAN00000")  // _HID: Hardware ID
+            Name (_UID, Zero)  // _UID: Unique ID
+            Name (_PR0, Package (0x01)  // _PR0: Power Resources for D0
+            {
+                FN00
+            })
+        }
+        
+//        Device (SMCD)
+//        {
+//            Name (_HID, EisaId ("PNP0C0B"))  // _HID: Hardware ID
+//            Name (_UID, Zero)  // _UID: Unique ID
+//            Name (_PR0, Package (0x01)  // _PR0: Power Resources for D0
+//            {
+//                FN00
+//            })
+//            
+//            Method (FAN0, 0, NotSerialized)
+//            {
+//                                Store (B1B2 (\_SB.PCI0.LPC.EC.HFN1, \_SB.PCI0.LPC.EC.HFN2), Local0)
 
+//                Return (Local0)
+//            }
+
+//            Method (TCPU, 0, NotSerialized)
+//            {
+//                                Store (\_SB.PCI0.LPC.EC.TMP0, Local0)
+
+//                Return (Local0)
+//            }
+//        }
+        
         PowerResource (FN01, 0x00, 0x0000)
         {
             Method (_STA, 0, Serialized)  // _STA: Status
@@ -13726,7 +13762,7 @@ Method (_DSM, 4, NotSerialized)
 
             Name (_AL0, Package (0x01)  // _ALx: Active List
             {
-                FAN0
+                SMCD
             })
             Name (_AL1, Package (0x01)  // _ALx: Active List
             {
