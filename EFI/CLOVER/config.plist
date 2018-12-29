@@ -4,6 +4,8 @@
 <dict>
 	<key>ACPI</key>
 	<dict>
+		<key>AutoMerge</key>
+		<true/>
 		<key>DSDT</key>
 		<dict>
 			<key>Debug</key>
@@ -142,7 +144,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>arch=x86_64 dart=0 darkwake=0 nv_disable=1 debug=0x100</string>
+		<string>-v arch=x86_64 dart=0 darkwake=0 nv_disable=1 debug=0x100</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -527,7 +529,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>D25452700GUFM591F</string>
+		<string>D25526108GUFM59A8</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -557,16 +559,16 @@
 		<key>ProductName</key>
 		<string>iMac14,1</string>
 		<key>SerialNumber</key>
-		<string>D25NWNZCF8J2</string>
+		<string>D25PXBZBF8J2</string>
 		<key>SmUUID</key>
-		<string>72DE31C2-C8E9-4EB0-8D59-781BAB33EA30</string>
+		<string>F310B438-7E4C-4BA4-93AF-1AD647C0093B</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
 		<key>CustomUUID</key>
-		<string>0D33FA1A-DCCF-4FB4-B013-00AF1990BABF</string>
+		<string>222469A5-30B2-499F-B97C-30151B8F689A</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
