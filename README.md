@@ -44,7 +44,7 @@ http://blog.daliansky.net/macOS-Mojave-10.14.2-18C54-official-version-with-Clove
 
 调试以后发现其实 `ig-platform-id` 是对的，但是需要打 DSDT 的补丁，这块是比较难点的地方。配置方面后来使用了 `FB-Patcher` 自动帮忙生成然后粘贴到 `config.plist` 里面搞定。
 
-然而，打完补丁以后显卡的型号从 `HD4600` 变成了 `Iris Pro` 但无闪屏了，原因未知：
+然而，<del>打完补丁以后显卡的型号从 `HD4600` 变成了 `Iris Pro` 但无闪屏了，原因未知</del>：
 
 ![System](asserts/system.png)
 
@@ -62,6 +62,15 @@ Method (_DSM, 4, NotSerialized)
     })
 }
 ```
+
+更新，使用 WhateverGreen.kext 进行新的显卡补丁操作，重新识别了对的型号同时解决了 Safari 下播放视频死机的问题。
+
+![System2](asserts/system2.png)
+
+总结下，删除 `ig-platform-id` 以及相关的定义，删除 `FakePCIID*` 系列内核扩展，并使用 `FB-Patcher` 制作补丁，同时应用 VRAM 补丁，具体参见这里：
+
+https://www.tonymacx86.com/threads/an-idiots-guide-to-lilu-and-its-plug-ins.260063/
+
 
 参考链接
 
@@ -96,3 +105,4 @@ Method (_DSM, 4, NotSerialized)
 * https://www.tonymacx86.com/threads/solved-how-to-make-alc283-work.220295/
 * https://www.tonymacx86.com/threads/setting-up-graphics-acceleration-for-intel-hd-4600.231454/
 * https://ark.intel.com/compare/78934,75045
+* https://www.tonymacx86.com/threads/tips-for-installing-sierra-on-lenovo-m93p-tiny-i7.267593
