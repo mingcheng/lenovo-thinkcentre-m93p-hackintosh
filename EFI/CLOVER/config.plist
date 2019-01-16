@@ -14,6 +14,8 @@
 			<false/>
 			<key>Fixes</key>
 			<dict>
+				<key>FixAirport</key>
+				<true/>
 				<key>FixHDA</key>
 				<false/>
 				<key>FixIPIC</key>
@@ -22,7 +24,11 @@
 				<true/>
 				<key>FixRTC</key>
 				<true/>
+				<key>FixSATA</key>
+				<true/>
 				<key>FixTMR</key>
+				<true/>
+				<key>FixUSB</key>
 				<true/>
 				<key>FixWAK</key>
 				<true/>
@@ -362,7 +368,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>D25435207GUFM59AD</string>
+		<string>D25531300GUFM591M</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -392,16 +398,16 @@
 		<key>ProductName</key>
 		<string>iMac14,1</string>
 		<key>SerialNumber</key>
-		<string>D25N94YSF8J2</string>
+		<string>D25Q5DZQF8J2</string>
 		<key>SmUUID</key>
-		<string>D1B442FA-FFF8-454D-842C-CE445E3482CB</string>
+		<string>F2F4E139-9BE0-40C2-9980-32B015C0DCE8</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
 		<key>CustomUUID</key>
-		<string>C96DFB1A-6189-4F68-A8B8-C0A74F8753F0</string>
+		<string>567DB3F1-5B89-48BC-A1D6-B95D691C3B82</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
