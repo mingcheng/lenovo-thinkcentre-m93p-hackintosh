@@ -1,8 +1,14 @@
-# Hackintosh for Lenovo M93P 
+# Hackintosh for Lenovo ThinkCenter M93P 
 
-![Lenovo M93P](asserts/device.png)
+![Lenovo ThinkCenter M93P](asserts/device.png)
 
-## 硬件概况
+## 概况
+
+联想（Lenovo）的 M93P 是目前二手市场比较常见的掌上 PC 机，目前（2018年底）其二手准系统的价格一般在 300-400 上下。其使用 Q87 的芯片组，以及搭载四代的 Intel CPU 具有很高的性价比。
+
+同时，四代的 Intel CPU 也是相对比较容易黑苹果的平台，因此出于易用性以及性价比方面考虑，根据 M93P 组装了黑苹果（Hackintosh）平台。
+
+详细的配置单如下：
 
 ```
 Computer model              Lenovo M93P
@@ -16,6 +22,24 @@ Operate System              Mojave 10.14.2
 ```
 
 注：原先使用的是 i5-4570T CPU，后来因为性能的关系更改为 i7-4720HQ 的移动版魔改台式机 1150 型号。由于原机没有蓝牙和无线，因此加装了博通的 94352HMB 型号的网卡。
+
+根据这个配置，已经拷机将近一个月的时间，使用稳定能够满足日常的工作任务。
+
+![Neofetch](asserts/neofetch.png)
+
+目前完美的情况：
+
+1. 完美睡眠唤醒，同时开启 HiDPI 支持 2k 显示器；
+2. USB 端口、网卡、声卡均可以正常工作；
+3. 更换 4720HQ 笔记本 CPU 以后，通过注入 SSDT 搭配 CPUFriend 能够实现变频；
+4. 安装了 BCM94352HMB 网卡(MPICE 接口)， WIFI 和蓝牙能够正常使用，同时支持蓝牙键盘唤醒；
+5. iMessage、AirDrop 能够正常使用。
+
+还有不足的地方：
+
+1. 无法读取风扇的转速；
+2. 在 Mojave 下无法支持深度睡眠（Hibernate），睡眠会自动唤醒；
+3. 没有测试 HDMI 音频情况。
 
 ## BIOS 设置
 
