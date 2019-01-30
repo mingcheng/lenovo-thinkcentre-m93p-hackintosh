@@ -1,6 +1,6 @@
 # Hackintosh for Lenovo ThinkCenter M93P 
 
-![Lenovo ThinkCenter M93P](asserts/device.png)
+![Lenovo ThinkCenter M93P](asserts/device2.jpg)
 
 ## 概况
 
@@ -25,6 +25,8 @@ Operate System              Mojave 10.14.2
 
 根据这个配置，已经拷机将近一个月的时间，使用稳定能够满足日常的工作任务。
 
+**2019-01-30，硬件更新。**使用了配套的外置光驱盒同时更换光驱盒为硬盘位，支持使用时间胶囊外接硬盘备份（不过走的是 USB 的通道，所以速度不是很理想）。
+
 ![Neofetch](asserts/neofetch.png)
 
 目前完美的情况：
@@ -40,6 +42,12 @@ Operate System              Mojave 10.14.2
 1. 无法读取风扇的转速；
 2. 在 Mojave 下无法支持深度睡眠（Hibernate），睡眠会自动唤醒；
 3. 没有测试 HDMI 音频情况。
+
+
+** 2019-01-30 更新 **，已经升级到 10.14.3，升级过程中出现声卡无法工作的情况，经过排查解决发现是 Kernel Patch 的问题，去除掉即可。
+
+![about.png](asserts/about.png)
+
 
 ## BIOS 设置
 
@@ -119,7 +127,8 @@ https://www.tonymacx86.com/threads/an-idiots-guide-to-lilu-and-its-plug-ins.2600
 相比次的硬件（i5-4570T）这次的 EFI 目录更新主要是两个方面：
 
 1. 精简了不必要的内核扩展（可能会更稳定和容易调试些）；
-2. 使用了 DSDT 的全量补丁，驱动了移动版的 CPU 核显。
+2. 不用删除「看起来多余的」efi 文件，否则会导致无法启动的问题；
+3. 使用了 DSDT 的全量补丁，驱动了移动版的 CPU 核显。
 
 ## 参考链接
 
