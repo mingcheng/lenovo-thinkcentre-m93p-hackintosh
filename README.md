@@ -70,6 +70,7 @@ http://blog.daliansky.net/macOS-Mojave-10.14.2-18C54-official-version-with-Clove
 
 下面重点说明一些重要设备的驱动和调整：
 
+
 ## 显卡设置
 
 设置显卡的过程有点难，原先使用是 i5-4570T CPU，其核显的型号是 HD4600，所以购买了笔记本的 CPU 型号也是 HD4600 。但是，同样的配置文件安装配置上去以后，出现了闪屏。
@@ -112,13 +113,17 @@ https://www.tonymacx86.com/threads/an-idiots-guide-to-lilu-and-its-plug-ins.2600
 
 声卡原先使用的是 AppleDHA 注入，考虑到这块需要拷贝扩展到 `S/L/E` 中并且对以后的升级也有可能存在问题，所以使用了 AppleALC + Lilu 以及 DSDT 配合注入的方式。
 
+M93P 使用的是 Reltek 的 ALC 283 音频芯片，使用 Apple ALC 驱动 Layout Id 为 1 即可，不需要在 config.plist 中单独设置。
+
 在这里还是建议使用 `FB-Patcher` 这个工具，它能半自动帮你搞定 `config.plist` 中的部分配置。
+
 
 ## CPU 调频
 
 ![CPU](asserts/cpu.png)
 
 由于是小机箱，所以默认频率的发热比较严重，因此使用 `CPUFriend.kext` 这个扩展。详细信息可以看这里 https://github.com/acidanthera/CPUFriend ，目前我的方式是使用 `ssdtPRGen.sh` 这个脚本，然后合并 SSDT 的配置（[详细](https://github.com/acidanthera/CPUFriend/blob/master/Instructions.md)）。
+
 
 ## 其他
 
@@ -127,6 +132,7 @@ https://www.tonymacx86.com/threads/an-idiots-guide-to-lilu-and-its-plug-ins.2600
 1. 精简了不必要的内核扩展（会更稳定和容易调试）；
 2. 务必不要删除「看起来多余」的 efi 文件，否则会导致无法启动；
 3. 使用了 DSDT 的全量补丁，驱动了移动版的 CPU 核显。
+
 
 ## 参考链接
 
