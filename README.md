@@ -25,7 +25,7 @@ Operate System              Mojave 10.14.2
 
 根据这个配置，已经拷机将近一个月的时间，使用稳定能够满足日常的工作任务。
 
-**2019-01-30，硬件更新。**使用了配套的外置光驱盒同时更换光驱盒为硬盘位，支持使用时间胶囊外接硬盘备份（不过走的是 USB 的通道，所以速度不是很理想）。
+*2019-01-30，硬件更新。* 使用了配套的外置光驱盒同时更换光驱盒为硬盘位，支持使用时间胶囊外接硬盘备份（不过走的是 USB 的通道，所以速度不是很理想）。
 
 ![Neofetch](asserts/neofetch.png)
 
@@ -44,7 +44,7 @@ Operate System              Mojave 10.14.2
 3. 没有测试 HDMI 音频情况。
 
 
-** 2019-01-30 更新 **，已经升级到 10.14.3，升级过程中出现声卡无法工作的情况，经过排查解决发现是 Kernel Patch 的问题，去除掉即可。
+*2019-01-30 更新*，已经升级到 10.14.3，升级过程中出现声卡无法工作的情况，经过排查解决发现是 Kernel Patch 的问题，去除掉即可。
 
 ![about.png](asserts/about.png)
 
@@ -80,7 +80,7 @@ http://blog.daliansky.net/macOS-Mojave-10.14.2-18C54-official-version-with-Clove
 
 ![System](asserts/system.png)
 
-然后没有使用 `WhatEverGreen` 驱动，还是使用了仿冒的 FakePCIID 系列的驱动（注意，不要多加不必要的驱动，对稳定性没有任何的好处）。
+<del>然后没有使用 `WhatEverGreen` 驱动，还是使用了仿冒的 FakePCIID 系列的驱动</del>（注意，不要多加不必要的驱动，对稳定性没有任何的好处）。
 
 HD4600 对应的 DSDT Patch，同时要注释掉原有的定义字段
 
@@ -95,9 +95,7 @@ Method (_DSM, 4, NotSerialized)
 }
 ```
 
-更新，使用 WhateverGreen.kext 进行新的显卡补丁操作，重新识别了对的型号同时解决了 Safari 下播放视频死机的问题。
-
-![System2](asserts/system2.png)
+*2019-01-04 更新*，使用 WhateverGreen.kext 进行新的显卡补丁操作，重新识别了对的型号同时解决了 Safari 下播放视频死机的问题。
 
 总结下，删除 `ig-platform-id` 以及相关的定义，删除 `FakePCIID*` 系列内核扩展，并使用 `FB-Patcher` 制作补丁，同时应用 VRAM 补丁，具体参见这里：
 
@@ -124,10 +122,10 @@ https://www.tonymacx86.com/threads/an-idiots-guide-to-lilu-and-its-plug-ins.2600
 
 ## 其他
 
-相比次的硬件（i5-4570T）这次的 EFI 目录更新主要是两个方面：
+相比上次的硬件（i5-4570T）升级，这次的 EFI 目录更新主要是两个方面：
 
-1. 精简了不必要的内核扩展（可能会更稳定和容易调试些）；
-2. 不用删除「看起来多余的」efi 文件，否则会导致无法启动的问题；
+1. 精简了不必要的内核扩展（会更稳定和容易调试）；
+2. 务必不要删除「看起来多余」的 efi 文件，否则会导致无法启动；
 3. 使用了 DSDT 的全量补丁，驱动了移动版的 CPU 核显。
 
 ## 参考链接
@@ -139,3 +137,5 @@ https://www.tonymacx86.com/threads/an-idiots-guide-to-lilu-and-its-plug-ins.2600
 * https://www.tonymacx86.com/threads/setting-up-graphics-acceleration-for-intel-hd-4600.231454/
 * https://ark.intel.com/compare/78934,75045
 * https://www.tonymacx86.com/threads/tips-for-installing-sierra-on-lenovo-m93p-tiny-i7.267593
+
+`- eof -`
