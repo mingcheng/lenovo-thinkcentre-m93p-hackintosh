@@ -15,23 +15,27 @@
 			<key>Fixes</key>
 			<dict>
 				<key>FixAirport</key>
-				<true/>
+				<false/>
 				<key>FixHDA</key>
 				<false/>
+				<key>FixHPET</key>
+				<true/>
 				<key>FixIPIC</key>
 				<false/>
 				<key>FixMutex</key>
-				<true/>
+				<false/>
 				<key>FixRTC</key>
 				<true/>
 				<key>FixSATA</key>
+				<false/>
+				<key>FixShutdown</key>
 				<true/>
 				<key>FixTMR</key>
 				<true/>
 				<key>FixUSB</key>
-				<true/>
+				<false/>
 				<key>FixWAK</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>Name</key>
 			<string>DSDT.aml</string>
@@ -49,6 +53,20 @@
 					<key>Replace</key>
 					<data>
 					SERFRg==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change SAT0 to SATA</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					U0FUMA==
+					</data>
+					<key>Replace</key>
+					<data>
+					U0FUQQ==
 					</data>
 				</dict>
 				<dict>
@@ -177,11 +195,9 @@
 		<key>Audio</key>
 		<dict>
 			<key>AFGLowPowerState</key>
-			<true/>
-			<key>Inject</key>
-			<integer>1</integer>
+			<false/>
 			<key>ResetHDA</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>Properties</key>
 		<dict>
@@ -288,42 +304,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Patching 11d41984 with 10ec0283 codec (patched by AppleHDA Patcher.app)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				hBnUEQ==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				gwLsEA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Zeroing 10ec0885 codec (patched by AppleHDA Patcher.app)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				hQjsEA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				AAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>disable port limit in XHCI kext (credit PMHeart)</string>
 				<key>Disabled</key>
 				<false/>
@@ -368,7 +348,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>D25531300GUFM591M</string>
+		<string>D25337501GUFM59AD</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -398,16 +378,16 @@
 		<key>ProductName</key>
 		<string>iMac14,1</string>
 		<key>SerialNumber</key>
-		<string>D25Q5DZQF8J2</string>
+		<string>D25LDZZPF8J2</string>
 		<key>SmUUID</key>
-		<string>F2F4E139-9BE0-40C2-9980-32B015C0DCE8</string>
+		<string>6855BBA6-BDDA-4748-B3AB-0ECE716258F7</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
 		<key>CustomUUID</key>
-		<string>567DB3F1-5B89-48BC-A1D6-B95D691C3B82</string>
+		<string>3BF079CE-FF20-4EA9-A9FC-AB41358D123C</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
