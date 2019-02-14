@@ -48,6 +48,9 @@ Operate System              Mojave 10.14.2
 
 ![about.png](asserts/about.png)
 
+*2019-02-14 更新*，安装了新的 SSD 硬盘，并将系统定格在 10.13.6（出于性能以及「不折腾」考虑），同时加装了针对 SSD 的转接卡以及散热片。
+
+![ssd.png](asserts/ssd.jpg)
 
 ## BIOS 设置
 
