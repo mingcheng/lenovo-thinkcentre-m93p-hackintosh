@@ -1,7 +1,6 @@
 # Hackintosh for Lenovo ThinkCenter M93P
 
-[A copy of English version is here](README_EN.md) , many thanks to [
-proxyviper](https://www.tonymacx86.com/members/proxyviper.2260028/)
+## [English Version is Here](README_EN.md) , thanks to [proxyviper](https://www.tonymacx86.com/members/proxyviper.2260028/)
 
 ![Lenovo ThinkCenter M93P](asserts/device2.jpg)
 
